@@ -15,5 +15,5 @@ https://www.primefaces.org/showcase/
 HSQLDB and _Sample Data_ <br/>
 https://sourceforge.net/projects/hsqldb/files/
 
-code style in this project config and checked by:
+code style in this project config and checked by <br/>
 https://checkstyle.sourceforge.io/config.html
