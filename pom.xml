@@ -23,7 +23,6 @@
         <maven.compiler.release>17</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <checkstyle-maven-plugin.version>3.2.2</checkstyle-maven-plugin.version>
-        <!--  <jakartaee-api.version>9.1.0</jakartaee-api.version>-->
     </properties>
 
     <dependencies>
