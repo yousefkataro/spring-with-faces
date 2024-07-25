@@ -4,6 +4,7 @@ import io.aturanj.sales.model.Role;
 import io.aturanj.sales.model.User;
 import io.aturanj.sales.repository.RoleRepository;
 import io.aturanj.sales.repository.UserRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,12 +19,9 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.*;
 
-
+@Slf4j
 @Service("userService")
 public class UserServiceImpl implements UserService, UserDetailsService {
-	
-	private final static Logger logger = LoggerFactory
-			.getLogger(UserServiceImpl.class);
 
 	@Autowired
 	private UserRepository userRepository;
@@ -71,7 +69,7 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 		if (user != null){
 			return new org.springframework.security.core.userdetails.User(user.getEmail(), user.getPassword(), user.isActive(), true, true, true, authorities);
 		}else{
-			logger.info("User not found: " + userName);
+			log.info("User not found: " + userName);
 			throw new UsernameNotFoundException("User not found: " + userName);
 		}
 	}
