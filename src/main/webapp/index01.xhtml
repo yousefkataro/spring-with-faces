@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://jakarta.faces/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<f:view>
+    <h:head>
+        <title>Facelets Example</title>
+    </h:head>
+    <h:body>
+        <h1>Welcome to Jakarta Faces!</h1>
+        <h:form>
+            <h:inputText value="#{userBean.username}" />
+            <h:commandButton value="Submit" action="#{userBean.submit}" />
+
+            <p:ajaxStatus onstart="PF('statusDialog').show()" onsuccess="PF('statusDialog').hide()"/>
+            <p:growl id="msgs" showDetail="true"/>
+
+            <p:dialog widgetVar="statusDialog" modal="true" draggable="false" closable="false" resizable="false" showHeader="false">
+                <div class="p-text-center">
+                    <i class="pi pi-spin pi-spinner loading-icon" aria-hidden="true"></i>
+                </div>
+            </p:dialog>
+
+        </h:form>
+        <h:outputText value="Welcome, #{userBean.username}" rendered="#{userBean.submitted}" />
+    </h:body>
+</f:view>
+</html>
