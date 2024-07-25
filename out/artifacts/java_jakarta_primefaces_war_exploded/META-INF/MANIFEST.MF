@@ -1,9 +1,0 @@
-Manifest-Version: 1.0
-Created-By: IntelliJ IDEA
-Built-By: ici
-Build-Jdk: Oracle OpenJDK version 21.0.2
-Implementation-Title: Spring with Faces
-Implementation-Version: 0.1.0-SNAPSHOT
-Implementation-Vendor-Id: com.example
-Main-Class: ${start-class}
-
