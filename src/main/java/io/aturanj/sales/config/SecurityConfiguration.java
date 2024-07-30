@@ -20,10 +20,6 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 @EnableWebSecurity
 public class SecurityConfiguration {
 
-	/*@Autowired
-	private BCryptPasswordEncoder bCryptPasswordEncoder;*/
-
-
 	@Autowired
 	private UserDetailsService userDetailsService;
 
@@ -100,8 +96,7 @@ public class SecurityConfiguration {
 	
 	@Bean
 	public BCryptPasswordEncoder bCryptPasswordEncoder() {
-		BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
-		return bCryptPasswordEncoder;
+        return new BCryptPasswordEncoder();
 	}
 
 }
